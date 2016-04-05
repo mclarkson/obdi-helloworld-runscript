@@ -11,36 +11,15 @@ A starting point for writing an Obdi plugin that runs a script on a local
 or remote Obdi worker.
 
 * This plugin has a Web Interface.
-
-   blah
- 
 * This plugin adds a REST endpoint.
 
-    A REST endpoint, '/helloworld-full', is added that can be accessed by
-    other tools or from othe command line, for example:
+    A REST endpoint, '/helloworld-runscript', is added that can be accessed by
+    other tools or from othe command line.
 
-        # Set the host and port
-        ipport="127.0.0.1:443"
-        
-        # Log in as the admin user
-        guid=`curl -ks \
-            -d '{"Login":"admin","Password":"admin"}' \
-            https://$ipport/api/login | grep -o "[a-z0-9][^\"]*"`
-        
-        # Use the /hello endpoint
-        curl -k "https://$ipport/api/admin/$guid/hello-endpoint"
-
-* This plugin runs scripts on workers.
-
-    A script is run on the configured worker. The script will output:
-    
-        hello from <hostname>
-        
-    Where '<hostname\>' is replaced with the host name the script is run on.
-
+* This plugin runs a script on workers.
 * This plugin does not use a private sqlite database.
 
-Similar plugin: [obdi-core-systemjobs](https://github.com/mclarkson/obdi-core-systemjobs)
+Similar plugin: [obdi-saltkeymanager](https://github.com/mclarkson/obdi-saltkeymanager)
 
 ## Manually accessing the REST endpoint
 
