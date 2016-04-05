@@ -36,9 +36,7 @@ $ curl -k "https://$ipport/api/nomen.nescio/$guid/helloworld-runscript/helloworl
 
 $ curl -k "https://$ipport/api/nomen.nescio/$guid/helloworld-runscript/helloworld-runscript?env_id=1&var_a=blobbyblobbyblobby"
 {"JobId":346,"Text":"","PluginReturn":0,"PluginError":""}
-```
-This is what 'Type: 2' output looks like:
-```
+
 $ curl -k "https://$ipport/api/nomen.nescio/$guid/outputlines?job_id=346"
 [
   {
@@ -49,111 +47,9 @@ $ curl -k "https://$ipport/api/nomen.nescio/$guid/outputlines?job_id=346"
   }
 ]
 ```
-This is what 'Type: 2' output looks like:
-```
-$ curl -k "https://$ipport/api/nomen.nescio/$guid/helloworld-runscript/helloworld-runscript?env_id=1&var_a=blobbyblobbyblobby"
-{"JobId":347,"Text":"","PluginReturn":0,"PluginError":""}
-
-$ curl -k "https://$ipport/api/nomen.nescio/$guid/outputlines?job_id=347"
-[
-  {
-    "Id": 357,
-    "JobId": 347,
-    "Serial": 1,
-    "Text": "\n"
-  },
-  {
-    "Id": 358,
-    "JobId": 347,
-    "Serial": 2,
-    "Text": "Hello from test.centos.org\n"
-  },
-  {
-    "Id": 359,
-    "JobId": 347,
-    "Serial": 3,
-    "Text": "\n"
-  },
-  {
-    "Id": 360,
-    "JobId": 347,
-    "Serial": 4,
-    "Text": "\n"
-  },
-  {
-    "Id": 361,
-    "JobId": 347,
-    "Serial": 5,
-    "Text": "---------\n"
-  },
-  {
-    "Id": 362,
-    "JobId": 347,
-    "Serial": 6,
-    "Text": "Arguments\n"
-  },
-  {
-    "Id": 363,
-    "JobId": 347,
-    "Serial": 7,
-    "Text": "---------\n"
-  },
-  {
-    "Id": 364,
-    "JobId": 347,
-    "Serial": 8,
-    "Text": "blobbyblobbyblobby\n"
-  },
-  {
-    "Id": 365,
-    "JobId": 347,
-    "Serial": 9,
-    "Text": "-----------\n"
-  },
-  {
-    "Id": 366,
-    "JobId": 347,
-    "Serial": 10,
-    "Text": "Environment\n"
-  },
-  {
-    "Id": 367,
-    "JobId": 347,
-    "Serial": 11,
-    "Text": "-----------\n"
-  },
-  {
-    "Id": 368,
-    "JobId": 347,
-    "Serial": 12,
-    "Text": "PWD=/tmp\n"
-  },
-  {
-    "Id": 369,
-    "JobId": 347,
-    "Serial": 13,
-    "Text": "SHLVL=1\n"
-  },
-  {
-    "Id": 370,
-    "JobId": 347,
-    "Serial": 14,
-    "Text": "SYSSCRIPTDIR=/var/lib/obdi-worker/scripts\n"
-  },
-  {
-    "Id": 371,
-    "JobId": 347,
-    "Serial": 15,
-    "Text": "_=/bin/env\n"
-  },
-  {
-    "Id": 372,
-    "JobId": 347,
-    "Serial": 16,
-    "Text": ""
-  }
-]
-```
+Type 1 output was used in the example Go code. Type 1 output can have multiple
+records with multiple lines in each record. Type 2 output will only ever have
+one record that may contain many lines.
 
 The job and its output can also be viewed using the System Jobs viewer.
 
