@@ -7,13 +7,12 @@ echo "Hello from $HOSTNAME"
 echo
 
 # Output the arguments
-echo "-----------------"
 echo "Program Arguments"
 echo "-----------------"
 echo "$@"
+echo
 
 # Output the environment
-echo "-----------"
 echo "Environment"
 echo "-----------"
 env
