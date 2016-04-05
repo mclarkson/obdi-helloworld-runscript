@@ -161,6 +161,9 @@ mgrApp.controller("helloWorldRunscript", function ($scope,$http,$uibModal,$log,
   // ----------------------------------------------------------------------
   // Runs the helloworld-runscript.sh script on the worker.
 
+    $scope.page_result = false;
+    $scope.scriptlines = "";
+
     $http({
       method: 'GET',
       url: baseUrl + "/" + $scope.login.userid + "/" + $scope.login.guid
