@@ -58,7 +58,7 @@ func (t *Plugin) GetRequest(args *Args, response *[]byte) error {
 		// The arguments to use when running the script
 		CmdArgs: args.QueryString["var_a"][0],
 		// Environment variables to pass to the script
-		EnvVars: "",
+		EnvVars: `A=1 B=2 C='a b c' D=44`,
 		// Name of an environment capability (where isworkerdef == true)
 		// that can point to a worker other than the default.
 		EnvCapDesc: "HELLOWORLD_RUNSCRIPT_WORKER",
