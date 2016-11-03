@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Obdi-helloworld-runscript by mclarkson</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Obdi-helloworld-runscript</h1>
-      <h2 class="project-tagline">Demonstrates running a script on an Obdi worker</h2>
-      <a href="https://github.com/mclarkson/obdi-helloworld-runscript" class="btn">View on GitHub</a>
-      <a href="https://github.com/mclarkson/obdi-helloworld-runscript/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/mclarkson/obdi-helloworld-runscript/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-
-    <section class="main-content">
-      <h1>
-<a id="obdi-helloworld-runscript" class="anchor" href="#obdi-helloworld-runscript" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>obdi-helloworld-runscript</h1>
-
-<p>This Obdi plugin has a UI and runs a script on a worker.</p>
-
-<h2>
-<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshot</h2>
-
-<p><img src="images/helloworld-endpoint.png?raw=true" alt=""></p>
-
-<h2>
-<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is it?</h2>
-
-<p>A starting point for writing an Obdi plugin that runs a script on a local
-or remote Obdi worker.</p>
-
-<ul>
-<li>This plugin has a Web Interface.</li>
-<li>
-<p>This plugin adds a REST endpoint.</p>
-
-<p>A REST endpoint, '/helloworld-runscript', is added that can be accessed by
-other tools or from othe command line.</p>
-</li>
-<li><p>This plugin runs a script on workers.</p></li>
-<li>This plugin does not use a private sqlite database.</li>
-</ul>
-
-<p>Similar plugin: <a href="https://github.com/mclarkson/obdi-saltkeymanager">obdi-saltkeymanager</a></p>
-
-<h2>
-<a id="manually-accessing-the-rest-endpoint" class="anchor" href="#manually-accessing-the-rest-endpoint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manually accessing the REST endpoint</h2>
-
-<pre><code>$ ipport="127.0.0.1:443"
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.1.25">
+  <meta charset="UTF-8">
+  <title>Obdi-helloworld-runscript by mclarkson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+<body>
+  <section class="page-header">
+    <h1 class="project-name">Obdi-helloworld-runscript</h1>
+    <h2 class="project-tagline">Demonstrates running a script on an Obdi worker</h2>
+    <a href= "https://github.com/mclarkson/obdi-helloworld-runscript" class="btn">View on GitHub</a>
+    <a href="http://dev.obdi.io" class="btn">Parent Repository</a>
+    <a href="http://obdi.io" class="btn">Obdi Home Page</a>
+    <!--
+    <a href= "https://github.com/mclarkson/obdi-helloworld-runscript/zipball/master" class="btn">Download .zip</a>
+    <a href= "https://github.com/mclarkson/obdi-helloworld-runscript/tarball/master" class="btn">Download .tar.gz</a>
+    -->
+  </section>
+  <section class="main-content">
+    <h1><a id="obdi-helloworld-runscript" class="anchor" href="#obdi-helloworld-runscript" aria-hidden=
+    "true"></a>obdi-helloworld-runscript</h1>
+    <p>This Obdi plugin has a UI and runs a script on a worker.</p>
+    <h2><a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"></a>Screenshot</h2>
+    <p><img src="images/helloworld-endpoint.png?raw=true" alt=""></p>
+    <h2><a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"></a>What is it?</h2>
+    <p>A starting point for writing an Obdi plugin that runs a script on a local or remote Obdi worker.</p>
+    <ul>
+      <li>This plugin has a Web Interface.</li>
+      <li>
+        <p>This plugin adds a REST endpoint.</p>
+        <p>A REST endpoint, '/helloworld-runscript', is added that can be accessed by other tools or from othe command
+        line.</p>
+      </li>
+      <li>
+        <p>This plugin runs a script on workers.</p>
+      </li>
+      <li>This plugin does not use a private sqlite database.</li>
+    </ul>
+    <p>Similar plugin: <a href="https://github.com/mclarkson/obdi-saltkeymanager">obdi-saltkeymanager</a></p>
+    <h2><a id="manually-accessing-the-rest-endpoint" class="anchor" href="#manually-accessing-the-rest-endpoint"
+    aria-hidden="true"></a>Manually accessing the REST endpoint</h2>
+    <pre><code>$ ipport="127.0.0.1:443"
 
 $ guid=`curl -ks -d '{"Login":"nomen.nescio","Password":"password"}' \
       https://$ipport/api/login | grep -o "[a-z0-9][^\"]*"`
@@ -75,24 +68,19 @@ $ curl -k "https://$ipport/api/nomen.nescio/$guid/outputlines?job_id=346"
   }
 ]
 </code></pre>
-
-<p>Type 1 output was used in the example Go code. Type 1 output can have multiple
-records with multiple lines in each record. Type 2 output will only ever have
-one record that may contain many lines.</p>
-
-<p>The job and its output can also be viewed using the System Jobs viewer.</p>
-
-<p>See <a href="https://github.com/mclarkson/obdi-dev-repository">obdi-dev-repository</a>
-for more information about Dev plugins.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/mclarkson/obdi-helloworld-runscript">Obdi-helloworld-runscript</a> is maintained by <a href="https://github.com/mclarkson">mclarkson</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+    <p>Type 1 output was used in the example Go code. Type 1 output can have multiple records with multiple lines in
+    each record. Type 2 output will only ever have one record that may contain many lines.</p>
+    <p>The job and its output can also be viewed using the System Jobs viewer.</p>
+    <p>See <a href="https://github.com/mclarkson/obdi-dev-repository">obdi-dev-repository</a> for more information
+    about Dev plugins.</p>
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href=
+      "https://github.com/mclarkson/obdi-helloworld-runscript">Obdi-helloworld-runscript</a> is maintained by <a href=
+      "https://github.com/mclarkson">mclarkson</a>.</span> <span class="site-footer-credits">This page was generated by
+      <a href="https://pages.github.com">GitHub Pages</a> using the <a href=
+      "https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason
+      Long</a>.</span>
+    </footer>
+  </section>
+</body>
 </html>
