@@ -108,3 +108,7 @@ fi
 rm -f -- "$t"
 trap - EXIT
 
+# Now force all the golang plugins to compile...
+
+curl -k "$proto://$ipport/api/admin/$guid/helloworld-runscript/helloworld-runscript"
+
